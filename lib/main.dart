@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'animation/animation_screen.dart';
 import 'building/building_layout_screen.dart';
 
 void main() {
@@ -6,7 +7,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,25 +29,39 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('ホーム'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-            child: Text('Tutorial1'),
-            onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Next(),
-                ),
-              );
-            }
+        appBar: AppBar(
+          title: Text('ホーム'),
         ),
-      ),
+        body: Center(
+            child:
+            Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              ElevatedButton(
+                  child: Text('Tutorial1'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Next(),
+                      ),
+                    );
+                  }),
+              ElevatedButton(
+                  child: Text('Tutorial1-1'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (context) => AnimationScreen(),
+                      ),
+                    );
+                  })
+            ])
+        )
     );
   }
 }
+
+
