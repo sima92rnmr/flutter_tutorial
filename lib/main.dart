@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'animation/animation_screen.dart';
-import 'building/building_layout_screen.dart';
+import 'package:flutter_tutorial/animation/animation_screen.dart';
+import 'package:flutter_tutorial/building/building_layout_screen.dart';
+import 'package:flutter_tutorial/youtube/youtube_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,11 +54,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute<void>(
+                      MaterialPageRoute(
                         builder: (context) => AnimationScreen(),
+
                       ),
                     );
-                  })
+                  }),
+              ElevatedButton(
+                  child: Text('Youtube'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Youtube(),
+                      ),
+                    );
+                  }),
             ])
         )
     );
