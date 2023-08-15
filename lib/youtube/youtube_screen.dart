@@ -17,16 +17,28 @@ class Youtube extends StatelessWidget {
           ),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.cast, color: Colors.white),
+              icon: Icon(
+                  Icons.cast,
+                  color: Colors.white
+              ),
               onPressed: () {},
             ),
             IconButton(
-              icon: Icon(Icons.notifications, color: Colors.white),
+              icon: Icon(
+                  Icons.notifications,
+                  color: Colors.white
+              ),
               onPressed: () {},
             ),
             IconButton(
-              icon: Icon(Icons.search, color: Colors.white),
+              icon: Icon(
+                  Icons.search,
+                  color: Colors.white
+              ),
               onPressed: () {},
+            ),
+            SizedBox(
+                width: 12
             ),
             CircleAvatar(
               radius: 16,
@@ -61,8 +73,10 @@ class Youtube extends StatelessWidget {
                                   alignment: Alignment.centerLeft,
                                   backgroundColor: const Color(0xFFa52a2a)),
                               onPressed: () {},
-                              icon: Icon(Icons.local_fire_department,
-                                  color: Colors.white),
+                              icon: Icon(
+                                  Icons.local_fire_department,
+                                  color: Colors.white
+                              ),
                               label: Text('急上昇'),
                             ),
                             SizedBox(
@@ -75,7 +89,9 @@ class Youtube extends StatelessWidget {
                                   backgroundColor: const Color(0xFFc88686)),
                               onPressed: () {},
                               icon: Icon(
-                                  Icons.sports_esports, color: Colors.white),
+                                  Icons.sports_esports,
+                                  color: Colors.white
+                              ),
                               label: Text('ゲーム'),
                             ),
                             SizedBox(
@@ -88,7 +104,9 @@ class Youtube extends StatelessWidget {
                                   backgroundColor: const Color(0xFF00793d)),
                               onPressed: () {},
                               icon: Icon(
-                                  Icons.emoji_objects, color: Colors.white),
+                                  Icons.emoji_objects,
+                                  color: Colors.white
+                              ),
                               label: Text('学び'),
                             ),
                             SizedBox(
@@ -101,7 +119,9 @@ class Youtube extends StatelessWidget {
                                 backgroundColor: const Color(0xFF00738a),),
                               onPressed: () {},
                               icon: Icon(
-                                  Icons.emoji_events, color: Colors.white),
+                                  Icons.emoji_events,
+                                  color: Colors.white
+                              ),
                               label: Text('スポーツ'),
                             ),
                             SizedBox(
@@ -125,7 +145,9 @@ class Youtube extends StatelessWidget {
                                     backgroundColor: const Color(0xFF40b3b3)),
                                 onPressed: () {},
                                 icon: Icon(
-                                    Icons.music_note, color: Colors.white),
+                                    Icons.music_note,
+                                    color: Colors.white
+                                ),
                                 label: Text('音楽'),
                               ),
                               SizedBox(
@@ -138,7 +160,9 @@ class Youtube extends StatelessWidget {
                                     backgroundColor: const Color(0xFF0b69d6)),
                                 onPressed: () {},
                                 icon: Icon(
-                                    Icons.newspaper, color: Colors.white),
+                                    Icons.newspaper,
+                                    color: Colors.white
+                                ),
                                 label: Text('ニュース'),
                               ),
                               SizedBox(
@@ -151,7 +175,10 @@ class Youtube extends StatelessWidget {
                                     alignment: Alignment.centerLeft,
                                     backgroundColor: const Color(0xFFf48437)),
                                 onPressed: () {},
-                                icon: Icon(Icons.live_tv, color: Colors.white),
+                                icon: Icon(
+                                    Icons.live_tv,
+                                    color: Colors.white
+                                ),
                                 label: Text('ライブ'),
                               ),
                               SizedBox(
@@ -176,7 +203,8 @@ class Youtube extends StatelessWidget {
                         child:SizedBox(
                           child: Text('　急上昇動画',
                         style: TextStyle(
-                      fontSize: 20, color:Colors.white,
+                      fontSize: 20,
+                            color:Colors.white,
                             fontWeight: FontWeight.bold
                         )
                        ),
@@ -240,7 +268,10 @@ class Youtube extends StatelessWidget {
                         ),
 
                           IconButton(
-                            icon: Icon(Icons.more_vert, color: Colors.white ),
+                            icon: Icon(
+                                Icons.more_vert,
+                                color: Colors.white
+                            ),
                             onPressed: () {},
                           ),
 
@@ -258,14 +289,48 @@ class Youtube extends StatelessWidget {
             ]
            )
     ),
-        bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar:
+        BottomNavigationBar(
           backgroundColor: const Color(0xFF332929),
+          unselectedItemColor: Colors.white,
+          selectedItemColor: Colors.white,
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home,color:Colors.white), label: 'ホーム'),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite,color:Colors.white), label: '検索'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.notifications,color:Colors.white), label: '登録チャンネル'),
-            BottomNavigationBarItem(icon: Icon(Icons.person,color:Colors.white), label: 'ライブラリ'),
+                icon: Icon(
+                    Icons.home,
+                    color:Colors.white
+                ),
+                label: 'ホーム'
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(
+                    Icons.explore,
+                    color:Colors.white
+                ),
+                label: '検索'
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.add_circle_outline,
+                color: Colors.white,
+                size: 45,
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(
+                    Icons.subscriptions,
+                    color:Colors.white
+                ),
+                label: '登録チャンネル'
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(
+                    Icons.video_library,
+                    color:Colors.white
+                ),
+                label: 'ライブラリ'
+            ),
           ],
           type: BottomNavigationBarType.fixed,
         )
