@@ -6,7 +6,7 @@ class Youtube extends StatelessWidget {
     return Scaffold(
         backgroundColor: const Color(0xFF010314),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF1b2c4b),
+          backgroundColor: const Color(0xFF332929),
           iconTheme: IconThemeData(
               size: 32 //アイコンの大きさ
           ),
@@ -42,7 +42,8 @@ class Youtube extends StatelessWidget {
           ],
         ),
         body:
-        Column(
+            SingleChildScrollView(
+            child: Column(
             children: [
               Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -161,53 +162,89 @@ class Youtube extends StatelessWidget {
                     )
                   ]
               ),
-         Row(
-            children: [
-              SizedBox(
-                height: 20,
-              ),
-              Center(
-                  child:SizedBox(
-                    child: Text('急上昇動画',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    fontSize: 20, color:Colors.white
-                  )
-                 ),
-              ),
-              ),
-              SizedBox(
-                  child:Image.asset(
-                      "images/youtube/arashi_logo.jpeg",
-                  )
-              ),
+                Container(
+                    color: const Color(0xFF332929),
+                    child: Column
+                      (children: <Widget>[
 
-              SizedBox(
-                height: 20,
-              ),
-            ]
-        ),
-              Row(
+                      SizedBox(
+                       height: 16,
+                       ),
+                      Container(
 
-                  children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(68),
-                         child: Image.asset(
-                    "images/youtube/arashi_logo.jpeg",
-                    width: 44,
-                  )
-                 ),
-                    Container(
-                        padding: EdgeInsets.all(32),
-                        child: Text('a',
+                        alignment: Alignment.centerLeft,
+                        child:SizedBox(
+                          child: Text('急上昇動画',
                         style: TextStyle(
-                        color:Colors.white)
+                      fontSize: 20, color:Colors.white
+                        )
+                       ),
+                       ),
+                      ),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      Container(
+                        child:Image.asset(
+                      "images/youtube/movie_image.png",width: 520
+                     )
                     ),
-                   )
-                ]
-              ),
+
+
+                      Container(
+                    color: const Color(0xFF332929),
+                       child:Row(
+                        children: [
+                         Column(
+                         children: <Widget>[
+                             ClipRRect(
+                              borderRadius: BorderRadius.circular(68),
+                                child: Image.asset(
+                              "images/youtube/arashi_logo.jpeg",
+                                width: 44,
+                               )
+                             ),
+                         ]
+                       ),
+                          Column(
+                           children: <Widget>[
+
+                            Container(
+                              padding: EdgeInsets.all(12),
+                             child: Text('"This is ARASHI LIVE 2020.12.31" Digest\nMovie',
+                                style: TextStyle(
+                                    fontSize: 16,color:Colors.white)
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(12),
+                            child: Text('ARASHI・127万回視聴・１日前',
+                                style: TextStyle(
+                                    color:Colors.white)
+                            ),
+                          ),
+                        ]
+                        ),
+                          IconButton(
+                            icon: Icon(Icons.more_vert, color: Colors.white),
+                            onPressed: () {},
+                          ),
+               ]
+                    )
+                )
             ]
-        )
+            )
+            ),
+                 Container(
+                  child:Image.asset(
+                      "images/youtube/movie_image.png",width: 520
+                  )
+              )
+            ]
+           )
+    ),
+      
     );
   }
 }
+
