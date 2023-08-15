@@ -174,9 +174,10 @@ class Youtube extends StatelessWidget {
 
                         alignment: Alignment.centerLeft,
                         child:SizedBox(
-                          child: Text('急上昇動画',
+                          child: Text('　急上昇動画',
                         style: TextStyle(
-                      fontSize: 20, color:Colors.white
+                      fontSize: 20, color:Colors.white,
+                            fontWeight: FontWeight.bold
                         )
                        ),
                        ),
@@ -194,9 +195,13 @@ class Youtube extends StatelessWidget {
                       Container(
                     color: const Color(0xFF332929),
                        child:Row(
+                           crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                          Column(
                          children: <Widget>[
+                           SizedBox(
+                           height: 16,
+                           ),
                              ClipRRect(
                               borderRadius: BorderRadius.circular(68),
                                 child: Image.asset(
@@ -206,29 +211,39 @@ class Youtube extends StatelessWidget {
                              ),
                          ]
                        ),
+                          SizedBox(
+                              width: 16
+                          ),
                           Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                            children: <Widget>[
 
-                            Container(
-                              padding: EdgeInsets.all(12),
-                             child: Text('"This is ARASHI LIVE 2020.12.31" Digest\nMovie',
+                             SizedBox(
+                               height: 16,
+                             ),
+                            Text('"This is ARASHI LIVE 2020.12.31" \nDigest Movie',
                                 style: TextStyle(
-                                    fontSize: 16,color:Colors.white)
+                                    fontSize: 16,color:Colors.white,
+                                    fontWeight: FontWeight.bold)
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(12),
-                            child: Text('ARASHI・127万回視聴・１日前',
+
+                          Text(
+                                'ARASHI・127万回視聴・１日前',
                                 style: TextStyle(
-                                    color:Colors.white)
+                                    color:const Color(0xFFbbb5b5))
                             ),
-                          ),
+
+                             SizedBox(
+                               height: 20,
+                             ),
                         ]
                         ),
+
                           IconButton(
-                            icon: Icon(Icons.more_vert, color: Colors.white),
+                            icon: Icon(Icons.more_vert, color: Colors.white ),
                             onPressed: () {},
                           ),
+
                ]
                     )
                 )
@@ -243,8 +258,19 @@ class Youtube extends StatelessWidget {
             ]
            )
     ),
-      
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: const Color(0xFF332929),
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home,color:Colors.white), label: 'ホーム'),
+            BottomNavigationBarItem(icon: Icon(Icons.favorite,color:Colors.white), label: '検索'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.notifications,color:Colors.white), label: '登録チャンネル'),
+            BottomNavigationBarItem(icon: Icon(Icons.person,color:Colors.white), label: 'ライブラリ'),
+          ],
+          type: BottomNavigationBarType.fixed,
+        )
     );
+
   }
 }
 
