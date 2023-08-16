@@ -39,7 +39,27 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
             child:
             Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-             
+
+              ElevatedButton(
+                  child: Text('tutorial1'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Next(),
+                      ),
+                    );
+                  }),
+              ElevatedButton(
+                  child: Text('tutorial1-1'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AnimationScreen(),
+                      ),
+                    );
+                  }),
               ElevatedButton(
                   child: Text('Youtube'),
                   onPressed: () {
