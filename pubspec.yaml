@@ -59,6 +59,9 @@ flutter:
   uses-material-design: true
   assets:
     - images/lake.jpg
+    - images/youtube/youtube_logo.png
+    - images/youtube/movie_image.png
+    - images/youtube/arashi_logo.jpeg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

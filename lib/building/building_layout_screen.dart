@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Next extends StatelessWidget{
-  const Next({super.key});
+class building_layoutscreen extends StatelessWidget{
+  const building_layoutscreen({super.key});
 
   @override
   Widget build(BuildContext context) {

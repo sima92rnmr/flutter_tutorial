@@ -1,0 +1,238 @@
+import 'package:flutter/material.dart';
+
+class YoutubeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: const Color(0xFF010314),
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF332929),
+          iconTheme: IconThemeData(size: 32 //アイコンの大きさ
+              ),
+          leadingWidth: 100,
+          leading: Image.asset(
+            'images/youtube/youtube_logo.png',
+            width: 80,
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.cast, color: Colors.white),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.notifications, color: Colors.white),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.search, color: Colors.white),
+              onPressed: () {},
+            ),
+            SizedBox(width: 12),
+            CircleAvatar(
+              radius: 16,
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.purple,
+              child: Text(
+                't',
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
+          ],
+        ),
+        body: SingleChildScrollView(
+            child: Column(children: [
+          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+            Container(
+              child: Column(children: <Widget>[
+                SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      fixedSize: Size(192, 48),
+                      alignment: Alignment.centerLeft,
+                      backgroundColor: const Color(0xFFa52a2a)),
+                  onPressed: () {},
+                  icon: Icon(Icons.local_fire_department, color: Colors.white),
+                  label: Text('急上昇'),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      fixedSize: Size(192, 48),
+                      alignment: Alignment.centerLeft,
+                      backgroundColor: const Color(0xFFc88686)),
+                  onPressed: () {},
+                  icon: Icon(Icons.sports_esports, color: Colors.white),
+                  label: Text('ゲーム'),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      fixedSize: Size(192, 48),
+                      alignment: Alignment.centerLeft,
+                      backgroundColor: const Color(0xFF00793d)),
+                  onPressed: () {},
+                  icon: Icon(Icons.emoji_objects, color: Colors.white),
+                  label: Text('学び'),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(192, 48),
+                    alignment: Alignment.centerLeft,
+                    backgroundColor: const Color(0xFF00738a),
+                  ),
+                  onPressed: () {},
+                  icon: Icon(Icons.emoji_events, color: Colors.white),
+                  label: Text('スポーツ'),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+              ]),
+            ),
+            Container(
+                child: Column(children: <Widget>[
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    fixedSize: Size(192, 48),
+                    alignment: Alignment.centerLeft,
+                    backgroundColor: const Color(0xFF40b3b3)),
+                onPressed: () {},
+                icon: Icon(Icons.music_note, color: Colors.white),
+                label: Text('音楽'),
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    fixedSize: Size(192, 48),
+                    alignment: Alignment.centerLeft,
+                    backgroundColor: const Color(0xFF0b69d6)),
+                onPressed: () {},
+                icon: Icon(Icons.newspaper, color: Colors.white),
+                label: Text('ニュース'),
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    fixedSize: Size(192, 48),
+                    alignment: Alignment.centerLeft,
+                    backgroundColor: const Color(0xFFf48437)),
+                onPressed: () {},
+                icon: Icon(Icons.live_tv, color: Colors.white),
+                label: Text('ライブ'),
+              ),
+              SizedBox(
+                height: 80,
+              ),
+            ]))
+          ]),
+          Container(
+              color: const Color(0xFF332929),
+              child: Column(children: <Widget>[
+                SizedBox(
+                  height: 16,
+                ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  child: SizedBox(
+                    child: Text('　急上昇動画',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
+                  ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Container(
+                    child: Image.asset("images/youtube/movie_image.png",
+                        width: 520)),
+                Container(
+                    color: const Color(0xFF332929),
+                    child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(children: <Widget>[
+                            SizedBox(
+                              height: 16,
+                            ),
+                            ClipRRect(
+                                borderRadius: BorderRadius.circular(68),
+                                child: Image.asset(
+                                  "images/youtube/arashi_logo.jpeg",
+                                  width: 44,
+                                )),
+                          ]),
+                          SizedBox(width: 16),
+                          Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                Text(
+                                    '"This is ARASHI LIVE 2020.12.31" \nDigest Movie',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold)),
+                                Text('ARASHI・127万回視聴・１日前',
+                                    style: TextStyle(
+                                        color: const Color(0xFFbbb5b5))),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                              ]),
+                          IconButton(
+                            icon: Icon(Icons.more_vert, color: Colors.white),
+                            onPressed: () {},
+                          ),
+                        ]))
+              ])),
+          Container(
+              child: Image.asset("images/youtube/movie_image.png", width: 520))
+        ])),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: const Color(0xFF332929),
+          unselectedItemColor: Colors.white,
+          selectedItemColor: Colors.white,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home, color: Colors.white), label: 'ホーム'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.explore, color: Colors.white), label: '検索'),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.add_circle_outline,
+                color: Colors.white,
+                size: 45,
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.subscriptions, color: Colors.white),
+                label: '登録チャンネル'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.video_library, color: Colors.white),
+                label: 'ライブラリ'),
+          ],
+          type: BottomNavigationBarType.fixed,
+        ));
+  }
+}

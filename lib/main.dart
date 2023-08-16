@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'animation/animation_screen.dart';
-import 'building/building_layout_screen.dart';
+import 'package:flutter_tutorial/animation/animation_screen.dart';
+import 'package:flutter_tutorial/building/building_layout_screen.dart';
+import 'package:flutter_tutorial/youtube/youtube_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,26 +39,37 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
             child:
             Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+
               ElevatedButton(
-                  child: Text('Tutorial1'),
+                  child: Text('tutorial1'),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Next(),
+                        builder: (context) => building_layoutscreen(),
                       ),
                     );
                   }),
               ElevatedButton(
-                  child: Text('Tutorial1-1'),
+                  child: Text('tutorial1-1'),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute<void>(
+                      MaterialPageRoute(
                         builder: (context) => AnimationScreen(),
                       ),
                     );
-                  })
+                  }),
+              ElevatedButton(
+                  child: Text('Youtube'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => YoutubeScreen(),
+                      ),
+                    );
+                  }),
             ])
         )
     );
