@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Next(),
+                        builder: (context) => building_layoutscreen(),
                       ),
                     );
                   }),
@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Youtube(),
+                        builder: (context) => YoutubeScreen(),
                       ),
                     );
                   }),
